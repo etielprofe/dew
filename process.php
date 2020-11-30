@@ -1,14 +1,13 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 
+$myObj = new stdClass();
+ 
+$myObj->name = "John";
+$myObj->age = 30;
+$myObj->city = "New York";
 
-echo 'Server processing...';
+$myJSON = json_encode($myObj);
 
-// Check for POST variable
-if(isset($_POST['name'])){
-   //echo 'POST: Your name is '. $_POST['name'];
-  }
-
-// Check for GET variable
-if(isset($_GET['name'])){
-  echo 'GET: Your name is '. $_GET['name'];
-}
+echo $myJSON;
+?>
